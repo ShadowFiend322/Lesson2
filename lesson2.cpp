@@ -11,17 +11,17 @@ int main() {
         return 1;
     }
 
-    double maxNumber = std::numeric_limits<double>::lowest();
+    double minNumber = std::numeric_limits<double>::max();
     double currentNumber;
 
     std::cout << "Введите " << n << " чисел:" << std::endl;
     for (int i = 0; i < n; ++i) {
         std::cin >> currentNumber;
-        if (currentNumber > maxNumber) {
-            maxNumber = currentNumber;
+        if (currentNumber < minNumber) {
+            minNumber = currentNumber;
         }
     }
 
-    std::cout << "Максимальное число: " << maxNumber << std::endl;
+    std::cout << "Минимальное число: " << minNumber << std::endl;
     return 0;
 }
